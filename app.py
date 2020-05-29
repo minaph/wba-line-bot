@@ -156,7 +156,8 @@ def slack():
                             },
                             {
                                 "type": "text",
-                                "text": data["text"]
+                                "text": urllib.parse.unquote(data["text"]),
+                                "wrap": True
                             }
                         ]
                     }
