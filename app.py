@@ -202,4 +202,13 @@ def handle_message(event):
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT"))
-    app.run(host="0.0.0.0", port=port)
+    try:
+        app.run(host="0.0.0.0", port=port)
+    except Exception as e:
+        requests.post(
+            "https://hooks.slack.com/services/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",
+            json={
+                "text": str(e),
+                "username": "エラー報告"
+            }
+        )
