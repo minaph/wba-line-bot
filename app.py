@@ -82,7 +82,7 @@ def slack():
     app.logger.info(data.keys())
 
     flex = FlexSendMessage(
-        alt_text="content",
+        alt_text="#"+data["channel_name"]+"への新しい投稿",
         contents={
             "type": "bubble",
             "body": {
