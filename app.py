@@ -82,7 +82,7 @@ def slack():
     app.logger.info(data.keys())
 
     flex = FlexSendMessage(
-        alt_text=data["text"],
+        alt_text="content",
         contents={
             "type": "bubble",
             "body": {
