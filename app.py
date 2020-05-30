@@ -189,15 +189,16 @@ def handle_message(event):
     # line_bot_api.reply_message(
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))
-    app.logger.info(type(event.source))
-    d = json.loads(str(event.source))
-    requests.post(
-        "https://hooks.slack.com/services/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",
-        json={
-            "text": event.message.text,
-            "username": "ID: "+d['userId']
-        }
-    )
+    # app.logger.info(type(event.source))
+    # d = json.loads(str(event.source))
+    # requests.post(
+    #     "https://hooks.slack.com/services/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",
+    #     json={
+    #         "text": event.message.text,
+    #         "username": "ID: "+d['userId']
+    #     }
+    # )
+    pass
 
 
 if __name__ == "__main__":
